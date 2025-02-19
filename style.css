@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,700;1,300&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    /* Light theme variables */
+    --bg-color-light: #ffffff;
+    --text-color-light: #333333;
+    --nav-bg-light: #f0f0f0;
+    --nav-text-light: #333333;
+    --btn-bg-light: #333333;
+    --btn-text-light: #ffffff;
+    --input-bg-light: #ffffff;
+    --table-border-light: #333333;
+    --hover-color-light: #666666;
+
+    /* Dark theme variables */
+    --bg-color-dark: #1a1a1a;
+    --text-color-dark: #ffffff;
+    --nav-bg-dark: #000000;
+    --nav-text-dark: #ffffff;
+    --btn-bg-dark: #ffffff;
+    --btn-text-dark: #000000;
+    --input-bg-dark: #333333;
+    --table-border-dark: #ffffff;
+    --hover-color-dark: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light theme styles */
+[data-theme="light"] {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+[data-theme="light"] nav {
+    background-color: var(--nav-bg-light);
+    color: var(--nav-text-light);
+}
+
+[data-theme="light"] .btn,
+[data-theme="light"] .btnsm {
+    background: var(--btn-bg-light);
+    color: var(--btn-text-light);
+}
+
+[data-theme="light"] input {
+    background-color: var(--input-bg-light);
+    color: var(--text-color-light);
+    border: 1px solid var(--text-color-light);
+}
+
+/* Dark theme styles */
+[data-theme="dark"] {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+[data-theme="dark"] nav {
+    background-color: var(--nav-bg-dark);
+    color: var(--nav-text-dark);
+}
+
+[data-theme="dark"] .btn,
+[data-theme="dark"] .btnsm {
+    background: var(--btn-bg-dark);
+    color: var(--btn-text-dark);
+}
+
+[data-theme="dark"] input {
+    background-color: var(--input-bg-dark);
+    color: var(--text-color-dark);
+    border: 1px solid var(--text-color-dark);
+}
+
+[data-theme="dark"] table,
+[data-theme="dark"] td,
+[data-theme="dark"] tr {
+    border-color: var(--table-border-dark);
+}
+
+/* Common styles */
+nav {
+    padding: 12px 3px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 0 23px;
+    font-weight: 800;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    margin: 0 23px;
+    align-items: center;
+}
+
+ul > li {
+    list-style: none;
+    margin: 0 13px;
+    cursor: pointer;
+}
+
+table, td, tr {
+    border: 2px solid;
+    border-collapse: collapse;
+    padding: 5px 13px;
+}
+
+.container {
+    max-width: 80vw;
+    margin: 23px auto;
+}
+
+h1, h2, h3 {
+    margin: 23px 0;
+}
+
+.btn, .btnsm {
+    padding: 8px 17px;
+    font-weight: 900;
+    border: 2px solid gray;
+    border-radius: 8px;
+    margin: 25px 0;
+    cursor: pointer;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.theme-icon {
+    width: 24px;
+    height: 24px;
+    display: none;
+}
+
+[data-theme="light"] .light-icon {
+    display: block;
+}
+
+[data-theme="dark"] .dark-icon {
+    display: block;
+}
+
+img {
+    cursor: pointer;
+    position: relative;
+    bottom: 7px;
+    width: 15px;
+    height: 13px;
+}
+
+#alert {
+    display: none;
+}
+
+input {
+    padding: 8px;
+    border-radius: 4px;
+}
